@@ -71,6 +71,10 @@
             border-radius: 20px;
             display: inline-block;
         }
+        #cvModal .modal-content {
+            max-height: 80vh;
+            overflow-y: auto;
+        }
     </style>
 </head>
 <body>
@@ -84,7 +88,7 @@
                 <a href="mailto:faisfais902709@gmail.com" class="social-link">
                     <i class="fas fa-envelope"></i> Email
                 </a>
-                <a href="#" download class="social-link">
+                <a href="Mohamed-Fais.pdf" class="social-link" data-bs-toggle="modal" data-bs-target="#cvModal">
                     <i class="fas fa-file-pdf"></i> CV
                 </a>
                 <a href="https://linkedin.com/in/mohamed-fais01" target="_blank" class="social-link">
@@ -100,9 +104,66 @@
         </div>
     </header>
 
+    <!-- CV Modal -->
+    <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cvModalLabel">Mohamed Fais - Curriculum Vitae</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <h2>Mohamed Fais</h2>
+                        <p>Email: faisfais902709@gmail.com | Location: Sri Lanka</p>
+                        
+                        <h3>Education</h3>
+                        <p><strong>Sabaragamuwa University of Sri Lanka</strong><br>
+                        B.Sc. (Hons) in Surveying and Geodesy</p>
+                        
+                        <h3>Research Interests</h3>
+                        <ul>
+                            <li>GIS Analysis</li>
+                            <li>Machine Learning</li>
+                            <li>Urban Land Use Classification</li>
+                            <li>Web Application Development</li>
+                        </ul>
+                        
+                        <h3>Research Projects</h3>
+                        <h4>Urban Land Use Function Identification</h4>
+                        <p>Developed a deep learning-based application to classify urban land use functions using multi-source POI data, demonstrating advanced spatial analysis capabilities.</p>
+                        
+                        <h4>Geospatial Data Visualization Web Application</h4>
+                        <p>Designed and implemented a Python-based web application integrating innovative geospatial data visualization techniques.</p>
+                        
+                        <h3>Technical Skills</h3>
+                        <ul>
+                            <li>Programming: Python</li>
+                            <li>Machine Learning: TensorFlow</li>
+                            <li>GIS Tools: SuperMap, QGIS, ArcGIS</li>
+                        </ul>
+                        
+                        <h3>Awards & Achievements</h3>
+                        <ul>
+                            <li>Participant, Workshop on Spatial Data Analysis and Mapping with SuperMap</li>
+                            <li>Recognized for innovative contributions to land use classification research</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" id="downloadCvBtn" class="btn btn-primary">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container my-5">
         <div class="row">
             <div class="col-md-10 offset-md-1">
+                <!-- Rest of the content remains the same as the original HTML -->
                 <div class="section-card">
                     <h2 class="mb-4">About Me</h2>
                     <p>A dedicated undergraduate researcher in Surveying and Geodesy with a passion for GIS analysis, machine learning, and urban spatial research. My work focuses on innovative approaches to urban land use classification using advanced deep learning techniques.</p>
@@ -165,5 +226,48 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('downloadCvBtn').addEventListener('click', function() {
+            // Create a temporary PDF-like content
+            const cvContent = `Mohamed Fais
+Email: faisfais902709@gmail.com
+Location: Sri Lanka
+
+EDUCATION
+Sabaragamuwa University of Sri Lanka
+B.Sc. (Hons) in Surveying and Geodesy
+
+RESEARCH INTERESTS
+- GIS Analysis
+- Machine Learning
+- Urban Land Use Classification
+- Web Application Development
+
+RESEARCH PROJECTS
+1. Urban Land Use Function Identification
+   Developed a deep learning-based application to classify urban land use functions using multi-source POI data
+
+2. Geospatial Data Visualization Web Application
+   Designed and implemented a Python-based web application for geospatial data visualization
+
+TECHNICAL SKILLS
+- Programming: Python
+- Machine Learning: TensorFlow
+- GIS Tools: SuperMap, QGIS, ArcGIS
+
+AWARDS & ACHIEVEMENTS
+- Participant, Workshop on Spatial Data Analysis and Mapping with SuperMap
+- Recognized for innovative contributions to land use classification research`;
+
+            // Create a Blob with the CV content
+            const blob = new Blob([cvContent], { type: 'text/plain' });
+            
+            // Create a link element and trigger download
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'Mohamed_Fais_CV.txt';
+            link.click();
+        });
+    </script>
 </body>
 </html>
