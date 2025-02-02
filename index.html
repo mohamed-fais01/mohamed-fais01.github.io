@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Mohamed Fais, GIS and Machine Learning Researcher specializing in Urban Land Use Classification">
+    <title>Mohamed Fais - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #2ecc71;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f6f7;
+            color: var(--primary-color);
+            line-height: 1.6;
+        }
+        .profile-header {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            margin-bottom: 1rem;
+        }
+        .section-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        .section-card:hover {
+            transform: translateY(-5px);
+        }
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 1rem;
+        }
+        .social-link {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 0.5rem;
+        }
+        .social-link:hover {
+            color: var(--accent-color);
+        }
+        .badge {
+            background-color: var(--secondary-color);
+            color: white;
+            margin: 0.2rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 768px) {
+            .profile-header {
+                padding: 1.5rem 0.5rem;
+            }
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+            .display-4 {
+                font-size: 2rem;
+            }
+            .lead {
+                font-size: 1rem;
+            }
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            .section-card {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="profile-header">
+        <div class="container">
+            <img src="Mohamed-Fais.jpg" alt="Mohamed Fais" class="profile-image">
+            <h1 class="display-4">Mohamed Fais</h1>
+            <p class="lead">Undergraduate in Surveying and Geodesy | GIS & Machine Learning Researcher</p>
+            
+            <div class="social-links">
+                <a href="mailto:faisfais902709@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+                <a href="Mohamed-Fais.pdf" download class="social-link">
+                    <i class="fas fa-file-pdf"></i> CV
+                </a>
+                <a href="https://linkedin.com/in/mohamed-fais01" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/mohamed-fais01" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://twitter.com/Mohamed_Fais01" target="_blank" class="social-link">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-card">
+                    <h2 class="mb-3">About Me</h2>
+                    <p>A dedicated undergraduate researcher in Surveying and Geodesy with a passion for GIS analysis, machine learning, and urban spatial research. My work focuses on innovative approaches to urban land use classification using advanced deep learning techniques.</p>
+                </div>
+
+                <div class="section-card">
+                    <h2 class="mb-3">Research Interests</h2>
+                    <div>
+                        <span class="badge">GIS Analysis</span>
+                        <span class="badge">Machine Learning</span>
+                        <span class="badge">Urban Land Use Classification</span>
+                        <span class="badge">Web Application Development</span>
+                    </div>
+                </div>
+
+                <div class="section-card">
+                    <h2 class="mb-3">Education</h2>
+                    <h4>Sabaragamuwa University of Sri Lanka</h4>
+                    <p>B.Sc. (Hons) in Surveying and Geodesy</p>
+                </div>
+
+                <div class="section-card">
+                    <h2 class="mb-3">Research Projects</h2>
+                    <div class="mb-3">
+                        <h4>Urban Land Use Function Identification</h4>
+                        <p>Developed a deep learning-based application to classify urban land use functions using multi-source POI data, demonstrating advanced spatial analysis capabilities.</p>
+                    </div>
+                    <div>
+                        <h4>Geospatial Data Visualization Web Application</h4>
+                        <p>Designed and implemented a Python-based web application integrating innovative geospatial data visualization techniques.</p>
+                    </div>
+                </div>
+
+                <div class="section-card">
+                    <h2 class="mb-3">Technical Skills</h2>
+                    <div>
+                        <span class="badge">Python</span>
+                        <span class="badge">TensorFlow</span>
+                        <span class="badge">GIS Tools</span>
+                        <span class="badge">SuperMap</span>
+                        <span class="badge">QGIS</span>
+                        <span class="badge">ArcGIS</span>
+                        <span class="badge">Machine Learning</span>
+                    </div>
+                </div>
+
+                <div class="section-card">
+                    <h2 class="mb-3">Awards & Achievements</h2>
+                    <ul class="ps-3">
+                        <li>Participant, Workshop on Spatial Data Analysis and Mapping with SuperMap</li>
+                        <li>Recognized for innovative contributions to land use classification research</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">&copy; 2025 Mohamed Fais. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
