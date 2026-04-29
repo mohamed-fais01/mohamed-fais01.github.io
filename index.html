@@ -1,120 +1,207 @@
-<!-- ONLY MAIN BODY CHANGED — KEEP YOUR CSS SAME -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<header class="profile-header">
-    <div class="container">
-        <img src="Mohamed-Fais.jpeg" alt="Mohamed Fais" class="profile-image">
-        <h1 class="display-4">Mohamed Fais</h1>
-        <p class="lead">Surveying Engineer | Geospatial Data Analyst | UAE</p>
+<title>Mohamed Fais | Surveying Engineer</title>
 
-        <div class="social-links">
-            <a href="mailto:faisfais902709@gmail.com" class="social-link">
-                <i class="fas fa-envelope"></i> Email
-            </a>
-            <a href="Mohamed-Fais.pdf" download class="social-link">
-                <i class="fas fa-file-pdf"></i> CV
-            </a>
-            <a href="https://linkedin.com/in/mohamed-fais01" target="_blank" class="social-link">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/mohamed-fais01" target="_blank" class="social-link">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-        </div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root {
+    --primary: #1a2a6c;
+    --secondary: #00c6ff;
+    --accent: #00ffb3;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #f0f4ff, #e6f7ff);
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* CARD STYLE */
+.card-custom {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card-custom:hover {
+    transform: translateY(-5px) scale(1.01);
+}
+
+/* BADGES */
+.badge-skill {
+    background: linear-gradient(45deg, var(--secondary), var(--accent));
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin: 5px;
+    display: inline-block;
+}
+
+/* SOCIAL */
+.social a {
+    color: white;
+    margin: 10px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.social a:hover {
+    color: var(--accent);
+}
+
+/* TITLES */
+.section-title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+/* FOOTER */
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .header {
+        padding: 40px 10px;
+    }
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <img src="Mohamed-Fais.jpeg" class="profile-img">
+    <h1 class="mt-3">Mohamed Fais</h1>
+    <p>Surveying Engineer | Geospatial Analyst</p>
+
+    <div class="social">
+        <a href="mailto:faisfais902709@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="Mohamed-Fais.pdf" download><i class="fas fa-file"></i></a>
+        <a href="https://linkedin.com/in/mohamed-fais01"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/mohamed-fais01"><i class="fab fa-github"></i></a>
     </div>
-</header>
+</div>
 
-<div class="container my-4">
+<div class="container mt-4">
 
-    <!-- ABOUT -->
-    <div class="section-card">
-        <h2>About Me</h2>
-        <p>
-            UAE-based Surveying Engineer currently working in high-profile construction environments.
-            Experienced in GNSS/RTK, Total Station, TLS (Leica RTC360), UAV surveys, and dimensional control.
-            Strong focus on QA/QC, zero-defect setout, and delivering accurate as-built documentation.
-        </p>
-    </div>
+<!-- ABOUT -->
+<div class="card-custom">
+    <h3 class="section-title">About Me</h3>
+    <p>
+        UAE-based Surveying Engineer with strong experience in GNSS, Total Station,
+        TLS (Leica RTC360), UAV surveys, and dimensional control. Focused on delivering
+        high-accuracy setout and zero-defect QA/QC in large-scale construction projects.
+    </p>
+</div>
 
-    <!-- CORE SKILLS -->
-    <div class="section-card">
-        <h2>Core Competencies</h2>
-        <span class="badge">GNSS / RTK</span>
-        <span class="badge">Total Station</span>
-        <span class="badge">TLS (Leica RTC360)</span>
-        <span class="badge">UAV Survey</span>
-        <span class="badge">AutoCAD</span>
-        <span class="badge">Civil 3D</span>
-        <span class="badge">ArcGIS Pro</span>
-        <span class="badge">QGIS</span>
-        <span class="badge">QA/QC</span>
-        <span class="badge">BIM (Revit, Recap)</span>
-        <span class="badge">Python Automation</span>
-    </div>
+<!-- SKILLS -->
+<div class="card-custom">
+    <h3 class="section-title">Core Skills</h3>
+    <span class="badge-skill">GNSS / RTK</span>
+    <span class="badge-skill">Total Station</span>
+    <span class="badge-skill">TLS</span>
+    <span class="badge-skill">UAV Survey</span>
+    <span class="badge-skill">AutoCAD</span>
+    <span class="badge-skill">Civil 3D</span>
+    <span class="badge-skill">ArcGIS Pro</span>
+    <span class="badge-skill">QGIS</span>
+    <span class="badge-skill">QA/QC</span>
+    <span class="badge-skill">BIM</span>
+    <span class="badge-skill">Python</span>
+</div>
 
-    <!-- EXPERIENCE -->
-    <div class="section-card">
-        <h2>Professional Experience</h2>
+<!-- EXPERIENCE -->
+<div class="card-custom">
+    <h3 class="section-title">Experience</h3>
 
-        <h4>Dimension Control Surveyor</h4>
-        <p><strong>Geosoft-Surtech | Abu Dhabi (2025–Present)</strong></p>
-        <ul>
-            <li>Executed setout, dimensional verification, and as-built surveys on active UAE construction site.</li>
-            <li>Maintained zero NCR record through strict QA/QC procedures.</li>
-            <li>Coordinated with engineering teams to resolve dimensional issues in real-time.</li>
-        </ul>
+    <h5>Dimension Control Surveyor</h5>
+    <p><strong>Geosoft-Surtech | Abu Dhabi</strong></p>
+    <ul>
+        <li>Setout and as-built surveys on active construction sites</li>
+        <li>Maintained zero NCR record with strict QA/QC</li>
+    </ul>
 
-        <h4>Survey Representative (Third-Party)</h4>
-        <p><strong>NPCC-Saipem Joint Venture | Abu Dhabi</strong></p>
-        <ul>
-            <li>Audited survey deliverables across 4 fabrication yards simultaneously.</li>
-            <li>Prevented offshore rework by identifying dimensional errors before installation.</li>
-            <li>Developed reporting format adopted across all yards.</li>
-        </ul>
+    <h5>Survey Representative</h5>
+    <p><strong>NPCC-Saipem JV</strong></p>
+    <ul>
+        <li>Audited 4 fabrication yards</li>
+        <li>Prevented costly offshore rework</li>
+    </ul>
 
-        <h4>Surveying Engineer</h4>
-        <p><strong>Central Engineering Services (Sri Lanka)</strong></p>
-        <ul>
-            <li>Delivered full survey package for Thalawa Road Project using GNSS & Total Station.</li>
-            <li>Built own NTRIP caster system eliminating external correction costs.</li>
-            <li>Executed TLS survey and produced BIM-ready 3D models.</li>
-        </ul>
+    <h5>Surveying Engineer</h5>
+    <p><strong>Central Engineering Services</strong></p>
+    <ul>
+        <li>Delivered GNSS surveys and Civil 3D outputs</li>
+        <li>Built own NTRIP system</li>
+    </ul>
+</div>
 
-    </div>
+<!-- PROJECTS -->
+<div class="card-custom">
+    <h3 class="section-title">Projects</h3>
 
-    <!-- PROJECTS -->
-    <div class="section-card">
-        <h2>Key Projects</h2>
+    <p><strong>Thalawa Road Project</strong> – GNSS survey & road design</p>
+    <p><strong>TLS BIM Model</strong> – Leica RTC360 to Revit workflow</p>
+    <p><strong>Survey Automation Tool</strong> – Python-based inspection</p>
+    <p><strong>Urban ML Research</strong> – LSTM land classification</p>
+</div>
 
-        <h5>Thalawa Road Project</h5>
-        <p>Complete GNSS-based survey, data processing in Civil 3D, and road alignment generation.</p>
+<!-- EDUCATION -->
+<div class="card-custom">
+    <h3 class="section-title">Education</h3>
+    <p>B.Sc (Hons) Surveying Sciences</p>
+    <p>Sabaragamuwa University of Sri Lanka</p>
+</div>
 
-        <h5>TLS BIM Model – National Youth Council Building</h5>
-        <p>Captured and processed point cloud data into Revit & Recap models.</p>
-
-        <h5>Survey Automation Tool</h5>
-        <p>Python-based tool integrating point cloud and image analysis for infrastructure inspection.</p>
-
-        <h5>Urban Land Use Classification (Research)</h5>
-        <p>Deep learning model (LSTM-RNN) for urban classification using POI data.</p>
-    </div>
-
-    <!-- EDUCATION -->
-    <div class="section-card">
-        <h2>Education</h2>
-        <h4>B.Sc (Hons) Surveying Sciences</h4>
-        <p>Sabaragamuwa University of Sri Lanka (2020–2024)</p>
-    </div>
-
-    <!-- LANGUAGES -->
-    <div class="section-card">
-        <h2>Languages</h2>
-        <span class="badge">English (Professional)</span>
-        <span class="badge">Tamil (Native)</span>
-        <span class="badge">Sinhala (Native)</span>
-    </div>
+<!-- LANGUAGES -->
+<div class="card-custom">
+    <h3 class="section-title">Languages</h3>
+    <span class="badge-skill">English</span>
+    <span class="badge-skill">Tamil</span>
+    <span class="badge-skill">Sinhala</span>
+</div>
 
 </div>
 
-<footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2026 Mohamed Fais | Surveying Engineer</p>
+<footer>
+    © 2026 Mohamed Fais | Portfolio
 </footer>
+
+</body>
+</html>
